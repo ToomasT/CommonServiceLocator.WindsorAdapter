@@ -1,6 +1,4 @@
-﻿using Microsoft.Practices.ServiceLocation;
-
-namespace CommonServiceLocator.WindsorAdapter
+﻿namespace CommonServiceLocator.WindsorAdapter
 {
 	using System;
 	using System.Collections.Generic;
