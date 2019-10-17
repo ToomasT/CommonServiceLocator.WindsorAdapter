@@ -12,9 +12,9 @@ namespace CommonServiceLocator.WindsorAdapter.Tests
 		{
 			IWindsorContainer container = new WindsorContainer()
 				.Register(
-				AllTypes.Of<ILogger>()
-					.FromAssembly(typeof(ILogger).Assembly)
-					.WithService.FirstInterface()
+				Classes
+					.FromAssemblyContaining<ILogger>()
+					.BasedOn<ILogger>().WithService.FirstInterface()
 				);
 			return new WindsorServiceLocator(container);
 		}
